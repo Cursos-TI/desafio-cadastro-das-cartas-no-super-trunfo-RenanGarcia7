@@ -2,7 +2,7 @@
 
             int main() {
     
-            char codigodacidade[3]; // Variável do tipo Char para armazenar o Código da Carta da Cidade
+            char codigo[3]; // Variável do tipo Char para armazenar o Código da Carta da Cidade
             char nome[10]; // Variável do tipo Char para armazenar o Nome da Cidade
             int populacao; // Variável do tipo Int para armazenar a População da Cidade
             float area; // Variável do tipo Float para armazenar a Área da Cidade em Km
@@ -13,7 +13,7 @@
             printf("\nTema 1 - Cadastro das Cartas\n"); // Tema 1 - Cadastro das Cartas
              
                 printf("\nDigite o Código da Cidade: \n"); // Solicita ao usuário que digite o código da cidade
-                scanf("%s", &codigodacidade); //armazena o codigo da cidade digitado pelo usuário
+                scanf("%s", &codigo); //armazena o codigo da cidade digitado pelo usuário
 
                 printf("\nDigite o Nome da Cidade: \n"); // Solicita ao usuário que digite o nome da cidade
                 scanf("%s", &nome); //armazena o nome da cidade digitado pelo usuário
@@ -31,7 +31,7 @@
                 scanf("%d", &numeropontoturistico); //armazena a quantidade de pontos turísticos da cidade digitado pelo usuário
 
                     printf("\nOs dados da carta são: \n"); //Este bloco exibe para o usuário os dados da carta cadastrada
-                    printf("Código: %s\n", codigodacidade);
+                    printf("Código: %s\n", codigo);
                     printf("Nome: %s\n", nome);
                     printf("População: %d\n", populacao);
                     printf("Área: %f\n", area);

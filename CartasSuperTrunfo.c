@@ -43,16 +43,16 @@
                     densidadepopulacional = populacao / area;
                     pibpercapta = pib / populacao;
 
-                        printf("\nOs dados da carta são: \n"); //Este bloco exibe para o usuário os dados da carta cadastrada
+                        printf("\nCarta 01: \n"); //Este bloco exibe para o usuário os dados da carta cadastrada
                         printf("Estado: %s\n", estado);
                         printf("Código: %s\n", codigodacidade);
                         printf("Nome: %s\n", nome);
                         printf("População: %d\n", populacao);
-                        printf("Área: %f\n", area);
-                        printf("PIB: %f\n", pib);
+                        printf("Área: %.2f km²\n", area);
+                        printf("PIB: %.2f bilhões de reais\n", pib);
                         printf("Pontos Turísticos: %d\n", numeropontoturistico);
-                        printf("Densidade Populacional: %.2f\n", densidadepopulacional);
-                        printf("PIB Per Capta: %.2f\n", pibpercapta);
+                        printf("Densidade Populacional: %.2f hab/km²\n", densidadepopulacional);
+                        printf("PIB Per Capta: %.2f reais\n", pibpercapta);
         
         return 0;
         }

@@ -6,13 +6,13 @@
             char estado1[1], estado2[2]; // Variável do tipo Char para armazenar o Código da Carta da Cidade
             char codigodacidade1[3], codigodacidade2[3]; // Variável do tipo Char para armazenar o Código da Carta da Cidade
             char nome1[10], nome2[10]; // Variável do tipo Char para armazenar o Nome da Cidade
-            int populacao1, populacao2; // Variável do tipo Int para armazenar a População da Cidade
+            unsigned long int populacao1, populacao2; // Variável do tipo Int para armazenar a População da Cidade
             float area1, area2; // Variável do tipo Float para armazenar a Área da Cidade em Km
             float pib1, pib2; // Variável do tipo Float para armazenar o PIB da Cidade
             int numeropontoturistico1, numeropontoturistico2; // Variável do tipo Int para armazenar a Quantidade de Pontos Turísticos da Cidade
             float densidadepopulacional1, densidadepopulacional2; // Variável do tipo Float para armazenar a Densidade Populacional da cidade
             float pibpercapta1, pibpercapta2; // Variável do tipo Float para armazenar o PIB Per Capta da Cidade
-
+            float superpoder1, superpoder2;
 
             printf("Desafio Super Trunfo - Países\n"); // Desafio Super Trunfo - Países
             printf("\nTema 1 - Cadastro das Cartas\n"); // Tema 1 - Cadastro das Cartas
@@ -29,7 +29,7 @@
                 scanf("%s", nome1); //Armazena o nome da cidade 1 digitado pelo usuário
 
                 printf("\nDigite a População da Cidade: \n"); // Solicita ao usuário que digite a população da cidade 1
-                scanf("%d", &populacao1); //Armazena a população da cidade 1 digitado pelo usuário
+                scanf("%lu", &populacao1); //Armazena a população da cidade 1 digitado pelo usuário
         
                 printf("\nDigite a Área da Cidade em km: \n"); // Solicita ao usuário que digite a área da cidade 1
                 scanf("%f", &area1); //Armazena a área da cidade 1 digitado pelo usuário
@@ -42,7 +42,7 @@
 
                     densidadepopulacional1 = populacao1 / area1; // Calcula a Densidade Populacional da Cidade 1
                     pibpercapta1 = pib1 / populacao1; // Calcula o Pib Per Capta da Cidade 1
-
+                    superpoder1 = (float)populacao1 + area1 + pib1 + (float)numeropontoturistico1 + pibpercapta1 - densidadepopulacional1; //Calcula o Super Poder da Cidade 1
 
 
             printf("\n Carta 2: \n"); //Carta 2
@@ -57,7 +57,7 @@
                 scanf("%s", nome2); //Armazena o nome da cidade 2 digitado pelo usuário
 
                 printf("\nDigite a População da Cidade: \n"); // Solicita ao usuário que digite a população da cidade 2
-                scanf("%d", &populacao2); //Armazena a população da cidade 2 digitado pelo usuário
+                scanf("%lu", &populacao2); //Armazena a população da cidade 2 digitado pelo usuário
         
                 printf("\nDigite a Área da Cidade em km: \n"); // Solicita ao usuário que digite a área da cidade 2
                 scanf("%f", &area2); //Armazena a área da cidade 2 digitado pelo usuário
@@ -70,28 +70,42 @@
 
                     densidadepopulacional2 = populacao2 / area2; // Calcula a Densidade Populacional da Cidade 2
                     pibpercapta2 = pib2 / populacao2; // Calcula o Pib Per Capta da Cidade 2
+                    superpoder2 = (float)populacao2 + area2 + pib2 + (float)numeropontoturistico2 + pibpercapta2 - densidadepopulacional2; //Calcula o Super Poder da Cidade 2
 
                         printf("\nCarta 01: \n"); //Este bloco exibe para o usuário os dados da carta cadastrada
                         printf("Estado: %s\n", estado1);
                         printf("Código: %s\n", codigodacidade1);
                         printf("Nome: %s\n", nome1);
-                        printf("População: %d\n", populacao1);
+                        printf("População: %lu\n", populacao1);
                         printf("Área: %.2f km²\n", area1);
                         printf("PIB: %.2f bilhões de reais\n", pib1);
                         printf("Pontos Turísticos: %d\n", numeropontoturistico1);
                         printf("Densidade Populacional: %.2f hab/km²\n", densidadepopulacional1);
                         printf("PIB Per Capta: %.2f reais\n", pibpercapta1);
+                        printf("Super Poder: %.2f\n", superpoder1);
+
 
                         printf("\nCarta 02: \n"); //Este bloco exibe para o usuário os dados da carta cadastrada
                         printf("Estado: %s\n", estado2);
                         printf("Código: %s\n", codigodacidade2);
                         printf("Nome: %s\n", nome2);
-                        printf("População: %d\n", populacao2);
+                        printf("População: %lu\n", populacao2);
                         printf("Área: %.2f km²\n", area2);
                         printf("PIB: %.2f bilhões de reais\n", pib2);
                         printf("Pontos Turísticos: %d\n", numeropontoturistico2);
                         printf("Densidade Populacional: %.2f hab/km²\n", densidadepopulacional2);
                         printf("PIB Per Capta: %.2f reais\n", pibpercapta2);
+                        printf("Super Poder: %.2f\n", superpoder2);
+
+                            printf("\nResultado\n");
+                            printf("População: A Carta 1 Venceu (%d)\n",  populacao1 > populacao2);
+                            printf("Área: A Carta 1 Venceu (%d)\n",  area1 > area2);
+                            printf("PIB: A Carta 1 Venceu (%d)\n",  pib1 > pib2);
+                            printf("Pontos Turísticos: A Carta 1 Venceu (%d)\n",  numeropontoturistico1 > numeropontoturistico2);
+                            printf("Densidade Populacional: A Carta 1 Venceu (%d)\n",  densidadepopulacional1 < densidadepopulacional2);
+                            printf("PIB Per Capta: A Carta 1 Venceu (%d)\n",  pibpercapta1 > pibpercapta2);
+                            printf("Super Poder: A Carta 1 Venceu (%d)\n",  superpoder1 > superpoder2);
+
         
         return 0;
         }

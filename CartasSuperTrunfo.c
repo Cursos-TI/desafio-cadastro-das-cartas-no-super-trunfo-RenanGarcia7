@@ -42,7 +42,7 @@
 
                     densidadepopulacional1 = populacao1 / area1; // Calcula a Densidade Populacional da Cidade 1
                     pibpercapta1 = pib1 / populacao1; // Calcula o Pib Per Capta da Cidade 1
-                    superpoder1 = (float)populacao1 + area1 + pib1 + (float)numeropontoturistico1 + pibpercapta1 - densidadepopulacional1; //Calcula o Super Poder da Cidade 1
+                    superpoder1 = (float)populacao1 + area1 + pib1 + (float)numeropontoturistico1 + pibpercapta1 + (1 / densidadepopulacional1); //Calcula o Super Poder da Cidade 1
 
 
             printf("\n Carta 2: \n"); //Carta 2
@@ -70,7 +70,7 @@
 
                     densidadepopulacional2 = populacao2 / area2; // Calcula a Densidade Populacional da Cidade 2
                     pibpercapta2 = pib2 / populacao2; // Calcula o Pib Per Capta da Cidade 2
-                    superpoder2 = (float)populacao2 + area2 + pib2 + (float)numeropontoturistico2 + pibpercapta2 - densidadepopulacional2; //Calcula o Super Poder da Cidade 2
+                    superpoder2 = (float)populacao2 + area2 + pib2 + (float)numeropontoturistico2 + pibpercapta2 + (1 / densidadepopulacional2); //Calcula o Super Poder da Cidade 2
 
                         printf("\nCarta 01: \n"); //Este bloco exibe para o usuário os dados da carta cadastrada
                         printf("Estado: %s\n", estado1);
